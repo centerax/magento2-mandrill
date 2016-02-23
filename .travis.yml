@@ -13,4 +13,4 @@ matrix:
     - php: 7.0
     - php: hhvm
 
-#script: phpunit --configuration phpunit_$DB.xml --coverage-text
+script: phpunit -c phpunit_$DB.xml Test/Unit/
