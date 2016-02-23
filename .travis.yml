@@ -6,11 +6,4 @@ php:
   - '7.0'
   - nightly
 
-matrix:
-  exclude:
-      env: DB=config  # PDO driver for pgsql is unsupported by HHVM (3rd party install for support)
-  allow_failures:
-    - php: 7.0
-    - php: hhvm
-
-script: phpunit -c phpunit_$DB.xml Test/Unit/
+script: phpunit -c phpunit_config.xml Test/Unit/
