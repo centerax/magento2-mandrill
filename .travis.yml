@@ -5,6 +5,9 @@ php:
 #  - 5.6
 #  - 7.0
 
+before_script:
+  - composer install
+
 script:
   #- composer create-project --stability=stable --no-install magento/project-community-edition ../Magento
   - wget https://github.com/magento/magento2/archive/2.0.2.zip
@@ -12,14 +15,16 @@ script:
   - cd magento2-2.0.2/
   - wget https://gist.githubusercontent.com/centerax/5e42abec89d62a1308ba/raw/4b3242361c0690e234266afb3520c2940ac1055a/auth.json
   - composer install
-  - mkdir -p app/code/Ebizmarts/Mandrill
-  - /bin/cp -r ../Block app/code/Ebizmarts/Mandrill/
-  - /bin/cp -r ../Controller app/code/Ebizmarts/Mandrill/
-  - /bin/cp -r ../etc app/code/Ebizmarts/Mandrill/
-  - /bin/cp -r ../Helper app/code/Ebizmarts/Mandrill/
-  - /bin/cp -r ../Model app/code/Ebizmarts/Mandrill/
-  - /bin/cp -r ../Setup app/code/Ebizmarts/Mandrill/
-  - /bin/cp -r ../Test app/code/Ebizmarts/Mandrill/
-  - /bin/cp -r ../view app/code/Ebizmarts/Mandrill/
+  - composer require ebizmarts/magento2-mandrill:dev-develop
+  - composer update
+  #- mkdir -p app/code/Ebizmarts/Mandrill
+  #- /bin/cp -r ../Block app/code/Ebizmarts/Mandrill/
+  #- /bin/cp -r ../Controller app/code/Ebizmarts/Mandrill/
+  #- /bin/cp -r ../etc app/code/Ebizmarts/Mandrill/
+  #- /bin/cp -r ../Helper app/code/Ebizmarts/Mandrill/
+  #- /bin/cp -r ../Model app/code/Ebizmarts/Mandrill/
+  #- /bin/cp -r ../Setup app/code/Ebizmarts/Mandrill/
+  #- /bin/cp -r ../Test app/code/Ebizmarts/Mandrill/
+  #- /bin/cp -r ../view app/code/Ebizmarts/Mandrill/
   - /bin/cp ../phpunit_config.xml dev/tests/unit/
   - ./vendor/bin/phpunit -c dev/tests/unit/phpunit_config.xml

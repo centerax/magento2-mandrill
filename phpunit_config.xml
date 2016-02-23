@@ -13,6 +13,9 @@
          bootstrap="./framework/bootstrap.php"
 >
     <testsuite name="Magento Unit Tests">
+        <directory suffix="Test.php">../../../app/code/Ebizmarts/AutoResponder/Test/Unit</directory>
+        <directory suffix="Test.php">../../../app/code/Ebizmarts/AbandonedCart/Test/Unit</directory>
+        <directory suffix="Test.php">../../../app/code/Ebizmarts/MageMonkey/Test/Unit</directory>
         <directory suffix="Test.php">../../../app/code/Ebizmarts/SagePaySuite/Test/Unit</directory>
         <directory suffix="Test.php">../../../app/code/Ebizmarts/Mandrill/Test/Unit</directory>
     </testsuite>
