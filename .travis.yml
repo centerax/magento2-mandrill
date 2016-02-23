@@ -10,7 +10,7 @@ script:
   - wget https://github.com/magento/magento2/archive/2.0.2.zip
   - unzip -qq 2.0.2.zip
   - cd magento2-2.0.2/
-  - wget https://gist.githubusercontent.com/centerax/5e42abec89d62a1308ba/raw/bac79bd1ca94d2d5246deb72cc72854477e4ec49/auth.json
+  - wget https://gist.githubusercontent.com/centerax/5e42abec89d62a1308ba/raw/4b3242361c0690e234266afb3520c2940ac1055a/auth.json
   - composer install
   - mkdir -p app/code/Ebizmarts/Mandrill
   - /bin/cp -r ../* app/code/Ebizmarts/Mandrill
