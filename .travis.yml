@@ -2,8 +2,8 @@ dist: trusty
 language: php
 php:
   - 5.5
-#  - 5.6
-#  - 7.0
+  - 5.6
+  - 7.0
 
 before_script:
   - composer install
@@ -17,14 +17,6 @@ script:
   - composer install
   - composer require ebizmarts/magento2-mandrill:dev-develop
   - composer update
-  #- mkdir -p app/code/Ebizmarts/Mandrill
-  #- /bin/cp -r ../Block app/code/Ebizmarts/Mandrill/
-  #- /bin/cp -r ../Controller app/code/Ebizmarts/Mandrill/
-  #- /bin/cp -r ../etc app/code/Ebizmarts/Mandrill/
-  #- /bin/cp -r ../Helper app/code/Ebizmarts/Mandrill/
-  #- /bin/cp -r ../Model app/code/Ebizmarts/Mandrill/
-  #- /bin/cp -r ../Setup app/code/Ebizmarts/Mandrill/
-  #- /bin/cp -r ../Test app/code/Ebizmarts/Mandrill/
-  #- /bin/cp -r ../view app/code/Ebizmarts/Mandrill/
   - /bin/cp ../phpunit_config.xml dev/tests/unit/
   - ./vendor/bin/phpunit -c dev/tests/unit/phpunit_config.xml
+  - ./vendor/bin/phpunit -c dev/tests/unit/phpunit_config.xml --coverage-text="coverage.txt"
