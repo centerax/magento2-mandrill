@@ -21,4 +21,5 @@ script:
   - /bin/cp -r ../Setup app/code/Ebizmarts/Mandrill/
   - /bin/cp -r ../Test app/code/Ebizmarts/Mandrill/
   - /bin/cp -r ../view app/code/Ebizmarts/Mandrill/
-  - ./vendor/bin/phpunit -c ../phpunit_config.xml
+  - /bin/cp ../phpunit_config.xml dev/tests/unit/
+  - ./vendor/bin/phpunit -c dev/tests/unit/phpunit_config.xml
