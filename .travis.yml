@@ -10,6 +10,7 @@ script:
   - wget https://github.com/magento/magento2/archive/2.0.2.zip
   - unzip -qq 2.0.2.zip
   - cd magento2-2.0.2/
+  - composer global config http-basic.repo.magento.com 4663362708601ec0c460a36edf59c70d f30b05a56f3b06d8b134ef93da73be5e
   - composer install
   - mkdir -p app/code/Ebizmarts/Mandrill
   - /bin/cp -r ../* app/code/Ebizmarts/Mandrill
