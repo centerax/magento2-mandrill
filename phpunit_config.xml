@@ -12,7 +12,7 @@
          verbose="true"
 >
     <testsuite name="Magento Unit Tests">
-        <directory suffix="Test.php">./Test/Unit</directory>
+        <directory suffix="Test.php">../../../app/code/Ebizmarts/SagePaySuite/Test/Unit</directory>
     </testsuite>
     <php>
         <ini name="date.timezone" value="America/Los_Angeles"/>
@@ -20,7 +20,7 @@
     </php>
     <filter>
         <whitelist addUncoveredFilesFromWhiteList="true">
-            <directory suffix=".php">./</directory>
+            <directory suffix=".php">../../../app/code/Ebizmarts/*</directory>
             <exclude>
                 <directory>../../../app/code/*/*/Test</directory>
                 <directory>../../../lib/internal/*/*/Test</directory>
