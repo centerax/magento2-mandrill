@@ -9,4 +9,6 @@ script:
   - composer create-project --stability=stable --no-install magento/project-community-edition ../Magento
   - mkdir -p ../Magento/app/code/Ebizmarts/Mandrill
   - /bin/cp -r ./* ../Magento/app/code/Ebizmarts/Mandrill
-  - ../Magento/vendor/bin/phpunit -c phpunit_config.xml
+  - cd ../Magento
+  - composer install
+  - ./vendor/bin/phpunit -c phpunit_config.xml
