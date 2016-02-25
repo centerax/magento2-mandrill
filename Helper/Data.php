@@ -32,7 +32,6 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         $this->_logger = $logger;
         parent::__construct($context);
     }
-
     public function getApiKey($store = null)
     {
         return $this->scopeConfig->getValue(self::XML_PATH_APIKEY, \Magento\Store\Model\ScopeInterface::SCOPE_STORE, $store);
@@ -41,6 +40,9 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     {
         return $this->scopeConfig->getValue(self::XML_PATH_ACTIVE, \Magento\Store\Model\ScopeInterface::SCOPE_STORE, $store);
     }
+    /**
+     * @codeCoverageIgnore
+     */
     public function log($msg)
     {
         $this->_logger->info($msg);

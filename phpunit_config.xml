@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-/**
- * Copyright © 2015 Magento. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.1/phpunit.xsd"
          colors="true"
@@ -13,11 +7,7 @@
          bootstrap="./framework/bootstrap.php"
 >
     <testsuite name="Magento Unit Tests">
-        <directory suffix="Test.php">../../../app/code/Ebizmarts/AutoResponder/Test/Unit</directory>
-        <directory suffix="Test.php">../../../app/code/Ebizmarts/AbandonedCart/Test/Unit</directory>
-        <directory suffix="Test.php">../../../app/code/Ebizmarts/MageMonkey/Test/Unit</directory>
-        <directory suffix="Test.php">../../../app/code/Ebizmarts/SagePaySuite/Test/Unit</directory>
-        <directory suffix="Test.php">../../../app/code/Ebizmarts/Mandrill/Test/Unit</directory>
+        <directory suffix="Test.php">../../../vendor/ebizmarts/magento2-mandrill/Test/Unit</directory>
     </testsuite>
     <php>
         <ini name="date.timezone" value="America/Los_Angeles"/>
@@ -25,7 +15,7 @@
     </php>
     <filter>
         <whitelist addUncoveredFilesFromWhiteList="true">
-            <directory suffix=".php">../../../app/code/Ebizmarts/*</directory>
+            <directory suffix=".php">../../../vendor/ebizmarts/magento2-mandrill</directory>
             <exclude>
                 <directory>../../../app/code/*/*/Test</directory>
                 <directory>../../../lib/internal/*/*/Test</directory>
