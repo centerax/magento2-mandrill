@@ -11,7 +11,7 @@ script:
   - cd magento2-2.0.2/
   - wget https://gist.githubusercontent.com/centerax/5e42abec89d62a1308ba/raw/4b3242361c0690e234266afb3520c2940ac1055a/auth.json
   - composer require --prefer-source --no-interaction ebizmarts/magento2-mandrill:dev-develop "squizlabs/php_codesniffer=*" magento-ecg/coding-standard
-  - ./vendor/squizlabs/php_codesniffer/scripts/phpcs --config-set installed_paths ./vendor/magento-ecg/coding-standard
+  - vendor/squizlabs/php_codesniffer/scripts/phpcs --config-set installed_paths vendor/magento-ecg/coding-standard
   - ./vendor/squizlabs/php_codesniffer/scripts/phpcs --standard="EcgM2" ./vendor/ebizmarts/magento2-mandrill/
   - /bin/cp ../phpunit_config.xml dev/tests/unit/
   - ./vendor/bin/phpunit -c dev/tests/unit/phpunit_config.xml --coverage-text
