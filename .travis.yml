@@ -19,4 +19,4 @@ script:
   #- sh -c "if [ '$TEST_SUITE' = 'phpcs' ]; then composer require --prefer-source --no-interaction "squizlabs/php_codesniffer=*" magento-ecg/coding-standard && vendor/squizlabs/php_codesniffer/scripts/phpcs --config-set installed_paths vendor/magento-ecg/coding-standard && ./vendor/squizlabs/php_codesniffer/scripts/phpcs -n --standard="EcgM2" ./vendor/ebizmarts/magento2-mandrill/; fi"
   - wget https://gist.githubusercontent.com/centerax/b1c79e3c1a5a1ed1167d/raw/6b1d1b710611746197670ce90849365840935996/validate_m2_package_v2.php 
   - wget -O magento2-mandrill-develop.zip https://github.com/ebizmarts/magento2-mandrill/archive/develop.zip
-  - php ./validate_m2_package_v2.php develop.zip
+  - php ./validate_m2_package_v2.php magento2-mandrill-develop.zip
